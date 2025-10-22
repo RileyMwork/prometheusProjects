@@ -36,5 +36,12 @@ namespace project1.test.post {
             Assert.Equal(1, post.Id);
         }
 
+        [Fact]
+        public async Task negativeTestGetPostByIdEquals0ReturnsNotFound()
+        {
+            var response = await _client.GetAsync("posts/0");
+            Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
+        }
+
     }
 }

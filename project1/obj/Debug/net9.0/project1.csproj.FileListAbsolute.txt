@@ -96,3 +96,4 @@ C:\Users\riley\Desktop\Prometheus\project1\obj\Debug\net9.0\refint\project1.dll
 C:\Users\riley\Desktop\Prometheus\project1\obj\Debug\net9.0\project1.pdb
 C:\Users\riley\Desktop\Prometheus\project1\obj\Debug\net9.0\project1.genruntimeconfig.cache
 C:\Users\riley\Desktop\Prometheus\project1\obj\Debug\net9.0\ref\project1.dll
+C:\Users\riley\Desktop\Prometheus\project1\obj\Debug\net9.0\project1.sourcelink.json
