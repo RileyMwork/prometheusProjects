@@ -15,7 +15,7 @@ namespace project1.test.post {
         }
 
         [Fact]
-        public async Task deletePostReturnsSuccess()
+        public async Task deletePostReturnsSuccessStatus()
         {
             var response = await client.DeleteAsync("posts/1");
             response.EnsureSuccessStatusCode();

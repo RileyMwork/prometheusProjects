@@ -15,7 +15,7 @@ namespace project1.test.post {
         }
 
         [Fact]
-        public async Task getAllPostsReturnsSuccessAndList() {
+        public async Task getAllPostsReturnsSuccessStatusAndList() {
             var response = await client.GetAsync("posts");
             response.EnsureSuccessStatusCode();
 

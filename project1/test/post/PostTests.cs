@@ -17,7 +17,7 @@ namespace project1.test.post {
         }
 
         [Fact]
-        public async Task newPostReturnsCreatedAndMatchingData()
+        public async Task newPostReturnsCreatedStatusAndMatchingData()
         {
 
             var newPost = new Post
