@@ -6,11 +6,11 @@ using project1.model;
 namespace project1.test.post {
     public class PutTests
     {
-        private readonly HttpClient _client;
+        private readonly HttpClient client;
 
         public PutTests()
         {
-            _client = new HttpClient
+            client = new HttpClient
             {
                 BaseAddress = new Uri("https://jsonplaceholder.typicode.com/")
             };
@@ -28,7 +28,7 @@ namespace project1.test.post {
                 Body = "Edited Test Body"
             };
 
-            var response = await _client.PutAsJsonAsync("posts/1", newPost);
+            var response = await client.PutAsJsonAsync("posts/1", newPost);
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 

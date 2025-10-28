@@ -6,10 +6,10 @@ using System.Reflection;
 
 namespace project1.test.post {
     public class DeleteTests {
-        private readonly HttpClient _client;
+        private readonly HttpClient client;
 
         public DeleteTests() {
-            _client = new HttpClient{
+            client = new HttpClient{
                 BaseAddress = new Uri("https://jsonplaceholder.typicode.com/")
             };
         }
@@ -17,7 +17,7 @@ namespace project1.test.post {
         [Fact]
         public async Task deletePostReturnsSuccess()
         {
-            var response = await _client.DeleteAsync("posts/1");
+            var response = await client.DeleteAsync("posts/1");
             response.EnsureSuccessStatusCode();
         }
     }

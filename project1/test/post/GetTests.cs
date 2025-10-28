@@ -6,17 +6,17 @@ using System.Reflection;
 
 namespace project1.test.post {
     public class GetTests {
-        private readonly HttpClient _client;
+        private readonly HttpClient client;
 
         public GetTests() {
-            _client = new HttpClient{
+            client = new HttpClient{
                 BaseAddress = new Uri("https://jsonplaceholder.typicode.com/")
             };
         }
 
         [Fact]
         public async Task getAllPostsReturnsSuccessAndList() {
-            var response = await _client.GetAsync("posts");
+            var response = await client.GetAsync("posts");
             response.EnsureSuccessStatusCode();
 
             var posts = await response.Content.ReadFromJsonAsync<List<Post>>();
@@ -28,7 +28,7 @@ namespace project1.test.post {
         [Fact]
         public async Task getPostByIdReturnsSuccessAndCorrectId()
         {
-            var response = await _client.GetAsync("posts/1");
+            var response = await client.GetAsync("posts/1");
             response.EnsureSuccessStatusCode();
 
             var post = await response.Content.ReadFromJsonAsync<Post>();
@@ -39,7 +39,7 @@ namespace project1.test.post {
         [Fact]
         public async Task negativeTestGetPostByIdEquals0ReturnsNotFound()
         {
-            var response = await _client.GetAsync("posts/0");
+            var response = await client.GetAsync("posts/0");
             Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
         }
 
